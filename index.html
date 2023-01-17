@@ -27,21 +27,25 @@
 <body>
   <img class="img" src="files/img/logo.png" width="30%">
   <div class="container pt-2 mt-2">
-    <h3>Nota: esta capacitación requiere de ciertos conocimientos previos</h3>  
+	<h1 class="text-center pt-1 pb-1 fw-bold">Introducción a framework PHP</h1>
+	<h5>En esta capacitación vamos a ver el framework laravel, los detalles de su estructura, conocimientos teóricos necesarios y metodologías de trabajo, también aplicaremos lo aprendido en un proyecto de final de curso.</h5>
+    <p><strong>Nota: </strong> esta capacitación requiere de ciertos conocimientos previos</p>  
   </div>  
   <div class="container text-center pt-3 mt-3">    
-    <form id="survey-form">
+    <form name="gform" id="gform" enctype="text/plain"
+                        action="https://docs.google.com/forms/d/e/1FAIpQLSf1MZGCMYGNgfRVCz1EXe6GBh6C7qdKe-7oGFS4ZQiagl3Msg/formResponse?"
+                        target="hidden_iframe" onsubmit="submitted=true;">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
 						<label id="name-label" for="name">Nombre:</label>
-						<input type="text" name="name" id="name" placeholder="Ingrese su nombre completo" class="form-control" required>
+						<input type="text" name="entry.1340507379" id="entry.1340507379" placeholder="Ingrese su nombre completo" class="form-control" required>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label id="email-label" for="email">Email:</label>
-						<input type="email" name="email" id="email" placeholder="Ingrese su email" class="form-control" required>
+						<input type="email" name="entry.1154531005" id="entry.1154531005" placeholder="Ingrese su email" class="form-control" required>
 					</div>
 				</div>
 			</div>			
@@ -49,13 +53,13 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label id="number-label" for="number">DNI</label>
-						<input type="text" name="masknumber" class="form-control" placeholder="Ingrese su DNI" >
+						<input type="text" name="entry.411213780" id="entry.411213780" class="form-control" placeholder="Ingrese su DNI" required>
 					</div>
 				</div>
         <div class="col-md-6">
 					<div class="form-group">
 						<label id="number-label" for="number">Telefono:</label>
-						<input type="text" name="masknumber" class="form-control" placeholder="Ingrese su teléfono">
+						<input type="text" name="entry.1339548199" id="entry.1339548199" class="form-control" placeholder="Ingrese su teléfono" required>
 					</div>
 				</div>
 				
@@ -64,7 +68,7 @@
         <div class="col-md-6">
 					<div class="form-group">
 						<label>Participo de alguna de estas capacitaciones?</label>
-						<select id="dropdown" name="role" class="form-control" required>
+						<select name="entry.1660908816" id="entry.1660908816" class="form-control" required>
 							<option disabled selected value>Seleccione una opción...</option>
 							<option value="1">Introducción a la programación web (Punto Digital)</option>
 							<option value="2">Argentina programa</option>
@@ -77,20 +81,27 @@
         <div class="col-md-6">
 					<div class="form-group">
 						<label>Detalle las tecnologias que conoce (HTML, CSS, JS, etc.):</label>
-						<textarea  id="comments" class="form-control" name="comment" placeholder="Detalle el nivel de conocimiento de las tecnologias"></textarea>
+						<textarea class="form-control" name="entry.900006893" id="entry.900006893" placeholder="Detalle el nivel de conocimiento de las tecnologias" required></textarea>
 					</div>
 				</div>
 			</div>
 			
 			<div class="row">
-				<div class="col-md-4">
-					<button type="submit" id="submit" class="btn btn-success btn-block">Enviar</button>
+				<div class="col-md-12">
+					<button type="submit" id="form-submit" class="btn btn-success btn-block">Enviar</button>
 				</div>
 			</div>
 
 		</form>
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                        onload="if(submitted) {window.location='https://omegeneralpico.github.io/WEB-transparencia-2022/';}"></iframe>
   </div>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="files/js/mascara.js"></script>  
+<script type="text/javascript">
+    $('#gform').on('submit', function (e) {
+      $('#gform *').fadeOut(2000);
+    });
+  </script>
 </body>
 </html>
