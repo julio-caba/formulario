@@ -27,21 +27,21 @@
 <body>
   <img class="img" src="files/img/logo.png" width="30%">
   <div class="container pt-2 mt-2">
-    <h1>Nota: esta capacitación requiere de ciertos conocimientos previos</h1>  
+    <h3>Nota: esta capacitación requiere de ciertos conocimientos previos</h3>  
   </div>  
   <div class="container text-center pt-3 mt-3">    
     <form id="survey-form">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<label id="name-label" for="name">Name</label>
-						<input type="text" name="name" id="name" placeholder="Enter your name" class="form-control" required>
+						<label id="name-label" for="name">Nombre:</label>
+						<input type="text" name="name" id="name" placeholder="Ingrese su nombre completo" class="form-control" required>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<label id="email-label" for="email">Email</label>
-						<input type="email" name="email" id="email" placeholder="Enter your email" class="form-control" required>
+						<label id="email-label" for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="Ingrese su email" class="form-control" required>
 					</div>
 				</div>
 			</div>			
@@ -49,28 +49,35 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label id="number-label" for="number">DNI</label>
-						<input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" >
+						<input type="text" name="masknumber" class="form-control" placeholder="Ingrese su DNI" >
 					</div>
 				</div>
-				<div class="col-md-6">
+        <div class="col-md-6">
+					<div class="form-group">
+						<label id="number-label" for="number">Telefono:</label>
+						<input type="text" name="masknumber" class="form-control" placeholder="Ingrese su teléfono">
+					</div>
+				</div>
+				
+			</div>
+			<div class="row">
+        <div class="col-md-6">
 					<div class="form-group">
 						<label>Participo de alguna de estas capacitaciones?</label>
 						<select id="dropdown" name="role" class="form-control" required>
-							<option disabled selected value>Select</option>
-							<option value="student">Introducción a la programación web</option>
-							<option value="job">Full Time Job</option>
-							<option value="learner">Full Time Learner</option>
-							<option value="preferNo">Prefer not to say</option>
-							<option value="other">Other</option>
+							<option disabled selected value>Seleccione una opción...</option>
+							<option value="1">Introducción a la programación web (Punto Digital)</option>
+							<option value="2">Argentina programa</option>
+							<option value="3">Programación web (Punto Digital)</option>
+							<option value="4">Plazti, Udemy, etc.</option>
+							<option value="5">Otras</option>
 						</select>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
+        <div class="col-md-6">
 					<div class="form-group">
-						<label>Leave Message</label>
-						<textarea  id="comments" class="form-control" name="comment" placeholder="Enter your comment here..."></textarea>
+						<label>Detalle las tecnologias que conoce (HTML, CSS, JS, etc.):</label>
+						<textarea  id="comments" class="form-control" name="comment" placeholder="Detalle el nivel de conocimiento de las tecnologias"></textarea>
 					</div>
 				</div>
 			</div>
@@ -83,6 +90,7 @@
 
 		</form>
   </div>
-  
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="files/js/mascara.js"></script>  
 </body>
 </html>
