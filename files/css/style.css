@@ -583,4 +583,17 @@ and (orientation: portrait) {
   }
 }
 
+/* Portrait */
+@media screen 
+  and (device-width: 720px) 
+  and (device-height: 1600px) 
+  and (orientation: portrait) {
+.img{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3em;
+  }
+}
   /*  */
